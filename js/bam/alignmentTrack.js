@@ -1457,6 +1457,7 @@ function shadedBaseColor(qual, baseColor) {
 
     if (alpha < 1) {
         baseColor = IGVColor.addAlpha(baseColor, alpha)
+        console.log("qual=",qual,"alpha=",alpha)
     }
     return baseColor
 }
