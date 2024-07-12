@@ -1444,7 +1444,7 @@ class AlignmentTrack extends TrackBase {
 function shadedBaseColor(qual, baseColor) {
 
     const minQ = 5   //prefs.getAsInt(PreferenceManager.SAM_BASE_QUALITY_MIN),
-    const maxQ = 20  //prefs.getAsInt(PreferenceManager.SAM_BASE_QUALITY_MAX);
+    const maxQ = 35  //prefs.getAsInt(PreferenceManager.SAM_BASE_QUALITY_MAX);
 
     let alpha
     if (qual < minQ) {
