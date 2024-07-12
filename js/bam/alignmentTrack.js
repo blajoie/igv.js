@@ -1450,14 +1450,17 @@ function shadedBaseColor(qual, baseColor) {
     if (qual < minQ) {
         alpha = 0.1
     } else {
+
         alpha = Math.max(0.1, Math.min(1.0, 0.1 + 0.9 * (qual - minQ) / (maxQ - minQ)))
+        console.log("qual=",qual,"alpha=",alpha, Math.min(1.0, 0.1 + 0.9 * (qual - minQ) / (maxQ - minQ)))
     }
     // Round alpha to nearest 0.1
     alpha = Math.round(alpha * 10) / 10.0
+    console.log("alpha=",alpha)
 
     if (alpha < 1) {
         baseColor = IGVColor.addAlpha(baseColor, alpha)
-        console.log("qual=",qual,"alpha=",alpha)
+        console.log("shading","qual=",qual,"alpha=",alpha)
     }
     return baseColor
 }
